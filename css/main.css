@@ -1,0 +1,81 @@
+body{
+    /* Para hacer las medidas flexibles */
+    width: 100%;
+    height: auto;
+    /* Imagen de fondo inicial (noche grande) */
+    background-image:url(../assets/images/night.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Clase de gato inicial visible grande*/
+#kitty-night {
+    position: absolute;
+    display: block;
+    padding: 10rem;
+}
+/* Texto que va a aparecer */
+#text-3{
+    font-size: 3rem;
+    display: block;
+}
+/* Clases para ocultar los demás fondos e imágenes */
+#kitty-sunny, #kitty-dawn, #text-2, #text-1 {
+    display: none;
+}
+
+
+/* Clase de textos*/
+.text{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+/* -------------MEDIA QUERIES-------------- */
+
+/* Media queries para cambio a gato y atardecer */
+@media only screen and (max-width: 1000px) {
+    body {
+        background-image:url(../assets/images/dawn.png);
+    	background-size: cover;
+    	background-repeat: no-repeat;
+    }
+    
+    #kitty-night, #text-3{
+        display: none;
+    }
+    #kitty-dawn{
+        display: block;
+        position: absolute;
+        width: 50%;
+        padding: 10rem;
+    }
+    #text-2{
+        font-size: 2rem;
+        display: block;  
+    }
+}
+
+/* Media queries para cambio a gato y noche */
+@media only screen and (max-width: 600px) {
+    body {
+        background-image:url(../assets/images/sunny-day.jpg);
+    	background-size: cover;
+    	background-repeat: no-repeat;
+    }
+    
+    #kitty-night, #text-3, #kitty-dawn, #text-2{
+        display: none;
+    }
+    #kitty-sunny{
+        display: block;
+        position: absolute;
+        width: 50%;
+        padding: 8rem;
+    }
+    #text-1{
+        font-size: 2rem;
+        display: block;
+    }
+}
